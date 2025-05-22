@@ -4,19 +4,19 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "COCO";
-const description = "The first COCOBAY NFT collection 🥥";
+const namePrefix = "DANIt";
+const description = "An alien test subject!";
 //const baseUri = "ipfs://QmaAqH2jcv6Ngg6AGQ93wH8vL3H8bmUM34ztmwdUxabSCg"; //Batch 1
 //const baseUri = "ipfs://QmT76NxPjKRKxvi2LHiZWuBkHYc8p2oNV4s9zcV65DVvQu"; //Batch 2
 const baseUri = "ipfs://????";
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: "DANIt",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0x1b6FfD2D404C54DDfd1BEE5620812c0642897a1D",
       share: 100,
     },
   ],
@@ -41,33 +41,25 @@ const defaultNameTransform = (name) => {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 1010,
+    growEditionSizeTo: 100,
     layersOrder: [
-      { name: "Background" },
       { name: "Body" },
-      { name: "Face" },
-      { name: "Legs", frequency: 50 },
-      { name: "Wear", frequency: 50 },
-      {
-        name: "ObjectRight",
-        frequency: 50,
-        options: { displayName: "Object" },
-      },
-      { name: "ObjectLeft", frequency: 50, options: { displayName: "Object" } },
-      { name: "Accessory", frequency: 15 },
-      { name: "Hat", frequency: 25 },
-      { name: "Bubble", frequency: 10 },
+      { name: "Eye" },
+      { name: "Head" },
+      { name: "Mouth" },
+      { name: "Tail" },
+      { name: "Tool" },
     ],
   },
 ];
 
 const shuffleLayerConfigurations = false;
 
-const debugLogs = false;
+const debugLogs = true;
 
 const format = {
-  width: 600,
-  height: 600,
+  width: 802,
+  height: 802,
   smoothing: false,
 };
 
